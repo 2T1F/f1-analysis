@@ -17,7 +17,6 @@ for i in range(len(dfs)):
     group["TyreLife"] = group["TyreLife"] / group["LapNumber"].max()
     group["SpL"] = group["Stint"] / group["LapNumber"]
     group["LapNumber"] = group["LapNumber"] / group["LapNumber"].max()
-    group["CornerForce"] = group["AvgCornerSpeed"]**2 / group["AvgCurvature"].mean()
     group["AvgCurvatureDiff"] = (group["AvgCurvature"] - group["AvgCurvature"].mean()) / group["AvgCurvature"].std()
     group["TempRatio"] = group["AirTemp"] / group["TrackTemp"]
     dfs[i] = group
